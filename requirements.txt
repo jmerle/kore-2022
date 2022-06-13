@@ -1,0 +1,4 @@
+kaggle-environments==1.9.10
+conan==1.49.0
+wurlitzer==3.0.2
+ipython==7.34.0
