@@ -60,6 +60,8 @@ void addPlayer(Board &board, const py::list &data, int id) {
         fleet->direction = static_cast<Direction>(info[3].cast<int>());
         fleet->flightPlan = FlightPlan::parse(info[4].cast<std::string>());
 
+        board.fleetsById[fleet->id] = fleet.get();
+
         fleet->cell->fleets.push_back(fleet.get());
         player->fleets.push_back(std::move(fleet));
     }
